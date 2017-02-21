@@ -78,13 +78,21 @@ public class Deck {
                 int power = Integer.valueOf(data[9]);
                 int toughness = Integer.valueOf(data[10]);
                 
+                int redgen = Integer.valueOf(data[11]);
+                int bluegen = Integer.valueOf(data[12]);
+                int greengen = Integer.valueOf(data[13]);
+                int whitegen = Integer.valueOf(data[14]);
+                int blackgen = Integer.valueOf(data[15]);
+                int colorlessgen = Integer.valueOf(data[16]);
+                
                 Card card = new Card(
                         name,
                         new Cost(red, green, blue, white, black, colorless),
                         new ArrayList<>(Arrays.asList(types_cast)),
                         title,
                         power,
-                        toughness
+                        toughness,
+                        new Cost(redgen, bluegen, greengen, whitegen, blackgen, colorlessgen)
                 );
                 
                 newDeck.cards.add(card);

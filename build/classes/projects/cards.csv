@@ -24,7 +24,7 @@ Undercity Informer,0,0,0,0,1,2,CREATURE,Human Rogue,2,3,0,0,0,0,0,0
 Undercity Informer,0,0,0,0,1,2,CREATURE,Human Rogue,2,3,0,0,0,0,0,0
 Undercity Informer,0,0,0,0,1,2,CREATURE,Human Rogue,2,3,0,0,0,0,0,0
 Underworld Cerberus,1,0,0,0,1,3,CREATURE,Hound,6,6,0,0,0,0,0,0
-Wild Cantor,-1,-1,0,0,0,0,CREATURE,Human Druid,1,1,,,,,,
+Wild Cantor,-1,-1,0,0,0,0,CREATURE,Human Druid,1,1,0,0,0,0,1,0
 Cabal Ritual,0,0,0,0,1,1,INSTANT,,-1,-1,0,0,0,0,3,0
 Cabal Ritual,0,0,0,0,1,1,INSTANT,,-1,-1,0,0,0,0,3,0
 Cabal Ritual,0,0,0,0,1,1,INSTANT,,-1,-1,0,0,0,0,3,0
@@ -50,10 +50,10 @@ Gitaxian Probe,0,0,1,0,0,0,SORCERY,,-1,-1,0,0,0,0,0,0
 Gitaxian Probe,0,0,1,0,0,0,SORCERY,,-1,-1,0,0,0,0,0,0
 Gitaxian Probe,0,0,1,0,0,0,SORCERY,,-1,-1,0,0,0,0,0,0
 Gitaxian Probe,0,0,1,0,0,0,SORCERY,,-1,-1,0,0,0,0,0,0
-Chrome Mox,0,0,0,0,0,0,ARTIFACT,,-1,-1,,,,,,
-Chrome Mox,0,0,0,0,0,0,ARTIFACT,,-1,-1,,,,,,
-Chrome Mox,0,0,0,0,0,0,ARTIFACT,,-1,-1,,,,,,
-Chrome Mox,0,0,0,0,0,0,ARTIFACT,,-1,-1,,,,,,
+Chrome Mox,0,0,0,0,0,0,ARTIFACT,,-1,-1,0,0,0,0,1,0
+Chrome Mox,0,0,0,0,0,0,ARTIFACT,,-1,-1,0,0,0,0,1,0
+Chrome Mox,0,0,0,0,0,0,ARTIFACT,,-1,-1,0,0,0,0,1,0
+Chrome Mox,0,0,0,0,0,0,ARTIFACT,,-1,-1,0,0,0,0,1,0
 Lotus Petal,0,0,0,0,0,0,ARTIFACT,,-1,-1,0,0,0,0,1,0
 Lotus Petal,0,0,0,0,0,0,ARTIFACT,,-1,-1,0,0,0,0,1,0
 Lotus Petal,0,0,0,0,0,0,ARTIFACT,,-1,-1,0,0,0,0,1,0

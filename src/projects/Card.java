@@ -10,6 +10,9 @@ public class Card implements ICard, Comparable {
     private final String title;
     private int power;
     private int toughness;
+    private Cost managen;
+
+           
     
     public Card() {
         
@@ -19,9 +22,11 @@ public class Card implements ICard, Comparable {
         this.title = "";
         this.power = Integer.MIN_VALUE;
         this.toughness = Integer.MIN_VALUE;
+        this.managen = new Cost();
+      
     }
     
-    public Card(String name, Cost cost, ArrayList<Type> types, String title, int power, int toughness) {
+    public Card(String name, Cost cost, ArrayList<Type> types, String title, int power, int toughness, Cost managen) {
         
         this.name = name;
         this.cost = cost;
@@ -29,6 +34,8 @@ public class Card implements ICard, Comparable {
         this.title = title;
         this.power = power;
         this.toughness = toughness;
+        this.managen = managen;
+              
     }
     
     @Override
@@ -66,6 +73,13 @@ public class Card implements ICard, Comparable {
         
         return this.toughness;
     }
+    @Override
+    public Cost getManagen() {
+        
+        return this.managen;
+    }
+    
+    
     
     @Override
     public String toString() {
@@ -86,4 +100,6 @@ public class Card implements ICard, Comparable {
         
         return this.getName().compareTo(((Card)obj).getName());
     }
+
+    
 }
