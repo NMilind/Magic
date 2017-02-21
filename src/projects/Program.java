@@ -1,12 +1,14 @@
 package projects;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Program {
 
     public static void main(String[] args) {
 
-        Deck deck = new Deck();
+        /*Deck deck = new Deck();
         try {
             deck = Deck.FromCSV("C:\\Users\\s769.098211\\Documents\\Magic\\src\\projects\\cards.csv");
         }
@@ -24,6 +26,14 @@ public class Program {
         }
         catch (IOException ex) {
             System.err.println(ex);
+        }*/
+        Player player = null;
+        try {
+            player = new Player();
+        } catch (IOException ex) {
+            System.err.println(ex);
         }
+        System.out.println(player.getHand());
+        System.out.println(player.isWinning());
     }
 }

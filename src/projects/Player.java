@@ -1,28 +1,20 @@
+
 package projects;
 
-import java.util.ArrayList;
-import java.util.Objects;
+import java.io.IOException;
 
-public class Hand {
+
+public class Player {
+
+    private Deck deck;
+    private Hand hand;
     
-    private ArrayList<Card> cards;
-    
-    public Hand() {
+    public Player() throws IOException {
         
-        this.cards = new ArrayList<>();
+        this.deck = Deck.FromCSV("C:\\Users\\s769.098211\\Documents\\Magic\\src\\projects\\cards.csv");
+        this.deck.shuffle();
+        this.hand = this.deck.dealHand(7);
     }
-    
-    public Hand(ArrayList<Card> cards) {
-        
-        cards.sort((c1, c2) -> c1.compareTo(c2));
-        this.cards = cards;
-    }
-    
-    public ArrayList<Card> getCards() {
-        
-        return this.cards;
-    }
-    
     public boolean isWinning() {
         
         int totalblack = 0;
@@ -30,7 +22,7 @@ public class Hand {
         boolean BS = false; //Balustrade Spy or Uundercity Informer is in hand
         boolean DR = true; //Dread Return and Uunderworld Cerberus are not in hand 
         int narcomoeba = 0; //Number of Narcomoebas
-        for (Card c: this.cards){
+        for (Card c: this.hand.getCards()){
             totalblack += c.getManagen().getManaCost(Mana.BLACK);
             total += c.getManagen().getConvertedManaCost();
             if(c.getName().equals("Balustrade Spy") || c.getName().equals("Undercity Informer")){
@@ -62,35 +54,11 @@ public class Hand {
         
         
     }
-    @Override
-    public int hashCode(){
-        int code = 0;
-        code = this.cards.stream().map((card) -> card.hashCode()).reduce(code, Integer::sum);
-        return (int)(code / this.cards.size());
+    public Hand getHand(){
+        return this.hand;
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Hand other = (Hand) obj;
-        if (!Objects.equals(this.cards, other.cards)) {
-            return false;
-        }
-        return true;
+    public Deck getDeck(){
+        return this.deck;
     }
-    @Override
-    public String toString() {
-        
-        String output = "";
-        output = this.cards.stream().map((card) -> card.toString() + "\n").reduce(output, String::concat);
-        return output;
-    }
+    
 }
